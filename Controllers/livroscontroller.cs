@@ -54,7 +54,8 @@ public class livroscontroller : ControllerBase
         return NotFound("Livro nao encontrado");
 
         dblivro.Titulo = livro.Titulo;
-        dblivro.Tipo = livro.Tipo;
+        dblivro.Categorias = livro.Categorias;
+        dblivro.Ano = livro.Ano;
 
         await _context.SaveChangesAsync();
 

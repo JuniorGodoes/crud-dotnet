@@ -6,8 +6,9 @@ namespace todoapi.models
 
         public string Titulo { get; set; }
 
-        public string Tipo { get; set; }
+        public int Ano { get; set; }
 
+        public string[] Categorias { get; set; }
 
     }
 }

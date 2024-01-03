@@ -11,5 +11,7 @@ namespace todoapi.Data
         }
 
         public DbSet<Livros> allBooks { get; set; }
+
+        public DbSet<Categorias> allCategorias { get; set; }
     }
 }
