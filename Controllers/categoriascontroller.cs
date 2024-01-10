@@ -24,6 +24,18 @@ public class categoriascontroller : ControllerBase
         return Ok(Categoria);
     }
 
+    [HttpGet("{Id}")]
+    public async Task<ActionResult<Categorias>> Getcategoria(int Id)
+    {
+        var categoria = await _context.allCategorias.FindAsync(Id);
+
+        if(categoria is null)
+        return NotFound("Categoria nao encontrada");
+
+        return Ok(categoria);
+    }
+    
+
     [HttpPost]
     public async Task<ActionResult<List<Categorias>>> AddCategoria(Categorias Categoria)
     {
