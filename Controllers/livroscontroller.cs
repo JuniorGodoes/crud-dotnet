@@ -62,7 +62,7 @@ public class livroscontroller : ControllerBase
         return Ok(await _context.allBooks.ToListAsync());
     }
     
-    [HttpDelete]
+    [HttpDelete("{Id}")]
     public async Task<ActionResult<List<Livros>>> Deletelivro(int Id)
     {
         var dblivro = await _context.allBooks.FindAsync(Id);

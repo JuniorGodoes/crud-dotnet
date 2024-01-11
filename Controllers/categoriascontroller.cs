@@ -60,7 +60,7 @@ public class categoriascontroller : ControllerBase
         return Ok(await GetAll());
     }
 
-    [HttpDelete]
+    [HttpDelete("{Id}")]
     public async Task<ActionResult<List<Categorias>>> Delete(int Id)
     {
         var categoriaproc = await _context.allCategorias.FindAsync(Id);
